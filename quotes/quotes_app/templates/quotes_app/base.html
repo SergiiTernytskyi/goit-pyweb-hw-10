@@ -20,8 +20,16 @@
                     >Quotes to Scrape</a
                 >
 
-                <div class="container-fluid justify-content-end">
+                <div class="container-fluid justify-content-end gap-4">
                     {% if user.is_authenticated %}
+
+                    <span class="fs-4"
+                        >Welcome,
+                        <span class="fw-bold fst-italic"
+                            >{{user.username}}</span
+                        ></span
+                    >
+
                     <form method="post" action="{% url 'users:signout' %}">
                         {% csrf_token %}
                         <button
